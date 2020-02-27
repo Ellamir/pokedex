@@ -8,7 +8,7 @@ $(function () {
         //$('ul').html(``);
         var id = $("#pokeId").val();
         console.log(id);
-        $.get(`http://pokeapi.co/api/v2/pokemon/${id}`, function (pokemon) {
+        $.get(`https://pokeapi.co/api/v2/pokemon/${id}`, function (pokemon) {
             console.log(pokemon);
             var pokeName = pokemon.species.name;
             console.log(pokeName);
