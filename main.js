@@ -11,9 +11,11 @@ $(function () {
         $.get(`https://pokeapi.co/api/v2/pokemon/${id}`, function (pokemon) {
             console.log(pokemon);
             var pokeName = pokemon.species.name;
+            var pokeSprite = pokemon.sprites.front_default;
             console.log(pokeName);
-        document.getElementById("nombrePokemon").innerHTML = `Este pokemon es el numero ${pokemon.id} y se llama ${pokemon.species.name}`;
-        document.getElementById("spritePokemon").innerHTML = `<img src="${pokemon.sprites.front_default}">`;
+        document.getElementById("nombrePokemon").innerHTML = `Pokemon N° ${pokemon.id} | ${pokeName}`;
+        document.getElementById("spritePokemon").src = pokeSprite;
+        
        
 
         var hp = pokemon.stats[5].base_stat;

@@ -9,3 +9,19 @@ canvas {
     height: 50px;
     width: 50px;
 }
+
+.pokeSprite {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.pokeName {
+    text-transform: capitalize;
+
+}
+
+.pokedex, .chart-container, .pokeInfo, canvas {
+    text-align: center;
+    max-width: 350px;
+    margin: auto;
+}

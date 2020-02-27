@@ -12,37 +12,41 @@
     <meta name="description" content="">
     <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Document</title>
+    <title>PokeDex</title>
 </head>
 
 <body>
+    <div class="pokedex">
+        <h1>Pokédex</h1>
+        <form>
+            <input type="text" id="pokeId" placeholder="pikachu">
+            <input type="submit" id="pokeBtn"></form>
+        <br><label for="pokeId">Busca por nombre o número (1 - 807)</label>
 
-    <form>
-        <input type="text" id="pokeId">
-        <input type="submit" id="pokeBtn"></form>
+        </form>
 
-    </form>
+        <table class="pokeInfo">
+            <th colspan="2">
+                <h2 class="pokeName" id="nombrePokemon"></h2>
+                </th>
+                <tr>
+                    <td>
 
-    <table>
-        <tr>
-            <td>
-                <p id="nombrePokemon"></p>
-            </td>
-            <td>
-                <p id="spritePokemon"></p>
-            </td>
-            <td>
-                <p id="statsPokemon"></p>
-            </td>
-        </tr>
-    </table>
 
-    <div class="chart-container" style="position: relative; height:10vh; width:10vw"></div>
-    <canvas id="chart" width="50px" height="50px"></canvas>
-
+                        <img class="pokeSprite" id="spritePokemon" src="favicon.png"></p>
+                    </td>
+                    <td>
+                        <p id="statsPokemon"></p>
+                    </td>
+                </tr>
+        </table>
+        <div class="chart-container"></div>
+        <canvas id="chart" width="50px" height="50px"></canvas>
 
     </div>
 
+
+    </div>
     <!-- Jquery V.3.3.1 -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
