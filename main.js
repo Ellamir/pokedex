@@ -26,12 +26,12 @@ $(function () {
         var spd = pokemon.stats[0].base_stat;
         console.log(hp);
         document.getElementById("statsPokemon").innerHTML = `
-        HP = ${hp} <br>
-        Ataque= ${atk} <br>
-        Defensa= ${def} <br>
-        Ataque Especial = ${sat} <br>
-        Defensa Especial = ${sdf} <br>
-        Velocidad = ${spd} <br>
+        <strong>HP</strong> = ${hp} <br>
+        <strong>Ataque</strong> = ${atk} <br>
+        <strong>Defensa</strong> = ${def} <br>
+        <strong>Ataque Especial</strong> = ${sat} <br>
+        <strong>Defensa Especial</strong> = ${sdf} <br>
+        <strong>Velocidad</strong> = ${spd} <br>
         `;
         
         //generar array para cargar stats al grafico

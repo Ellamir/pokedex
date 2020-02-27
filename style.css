@@ -26,6 +26,10 @@ canvas {
     margin: auto;
 }
 
+td.statsPokemon, p#statsPokemon {
+    text-align: left;
+    }
+
 .imgtitle {
     width: 50%;
 }
