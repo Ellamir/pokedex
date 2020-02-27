@@ -1,0 +1,14 @@
+canvas {
+    border: 1px dotted #fff;
+    max-width: 300px;
+  }
+  
+  .chart-container {
+    position: relative;
+    margin: auto;
+    height: 50px;
+    width: 50px;
+  }
+
+
+  

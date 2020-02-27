@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap" rel="stylesheet">
+
+    <meta name="author" content="TFW">
+    <meta name="description" content="">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        canvas {
+            border: 1px dotted #fff;
+            max-width: 300px;
+        }
+
+        .chart-container {
+            position: relative;
+            margin: auto;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form>
+        <input type="text" id="pokeId">
+        <input type="submit" id="pokeBtn"></form>
+
+    </form>
+
+    <table>
+        <tr>
+            <td>
+                <p id="nombrePokemon"></p>
+            </td>
+            <td>
+                <p id="spritePokemon"></p>
+            </td>
+            <td>
+                <p id="statsPokemon"></p>
+            </td>
+        </tr>
+    </table>
+
+    <div class="chart-container" style="position: relative; height:10vh; width:10vw"></div>
+    <canvas id="chart" width="50px" height="50px"></canvas>
+<!--
+    <script>
+
+       /* var ctx = document.getElementById('chart');
+
+        var myRadarChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['HP', 'Ataque', 'Defensa', 'At. Especial', 'Def. Especial', 'Velocidad'],
+                datasets: [{
+                    data: [35, 55, 40, 50, 50, 90]
+                }]
+            },
+            options: {
+
+                legend: {
+                    display: false,
+
+                }
+            }
+        }); */
+
+
+        var ctx = document.getElementById('chart');
+
+        let chart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+        datasets: [{
+            label: 'POKEMON',
+            data: [35, 55, 40, 50, 50, 90]
+        }],
+        labels: ['HP', 'Ataque', 'Defensa', 'At. Especial', 'Def. Especial', 'Velocidad']
+    },
+    options: {
+        
+        scale: {
+            ticks: {
+                suggestedMin: 0,
+                suggestedMax: 250
+            }
+        }
+       
+    }
+});
+
+    </script> -->
+
+
+    </div>
+
+    <!-- Jquery V.3.3.1 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Popper JS V.1.14.3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <!-- Graficos de https://www.chartjs.org/ -->
+</body>
+
+</html>
