@@ -12,10 +12,9 @@ $(function () {
             console.log(pokemon);
             var pokeName = pokemon.species.name;
             console.log(pokeName);
-         document.getElementById("nombrePokemon").innerHTML = `Este pokemon es el numero ${pokemon.id} y se llama ${pokemon.species.name}`;
+        document.getElementById("nombrePokemon").innerHTML = `Este pokemon es el numero ${pokemon.id} y se llama ${pokemon.species.name}`;
         document.getElementById("spritePokemon").innerHTML = `<img src="${pokemon.sprites.front_default}">`;
-        //document.getElementById("nombrePokemon").innerHTML = `Este pokemon se llama ${pokemon.species.name}`;
-        //console.log(pokemon.stats[0].base_stat);
+       
 
         var hp = pokemon.stats[5].base_stat;
         var atk = pokemon.stats[4].base_stat;
@@ -33,13 +32,11 @@ $(function () {
         Velocidad = ${spd} <br>
         `;
         
-        //chart.datasets.label(obj) / data(array)
+        //generar array para cargar stats al grafico
         var pokeStats = [];
         pokeStats.push(hp, atk, def, sat, sdf, spd);
         console.log(pokeStats);
-        //chart.datasets.data.push(hp, atk, def, sat, sdf, spd);
-        //console.log(chart.datasets.data);
-        //chart.datasets.label.push
+       
 
         
         var ctx = document.getElementById('chart');
@@ -69,43 +66,3 @@ $(function () {
         });
     });
 });
-
-
-
-/*
-
-//otras formas de partirlo que no utilicé
-
-$.ajax({
-    url: "http://pokeapi.co/api/v2/pokemon/";
-    
-    success: function (response) {
-        $.each (response, function (indexInArray,
-            valueOfElement) {
-                console.log(indexInArray);
-                console.log(valueOfElement.name);
-            });
-    }
-});
-  $(function(){
-
-
-
-    $('form').on('submit', function(evento) {
-        evento.preventDefault();
-        var valor_numero = $("#pokeId").val();
-        console.log(valor_numero);
-        //$(".pokeInfo").empty();
-        //$(".pStats".empty();
-        console.log(valor_numero);
-        $.ajax({
-            url: `https://pokeapi.co/api/v2/pokemon/${valor_numero}`,
-        }).done(function ( data ) {
-            console.log ("Sample of data", data);
-            $(".pokeInfo").append(`${data.name}`);
-        });
-    });
-}
-
-); 
-*/
